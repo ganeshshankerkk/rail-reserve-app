@@ -19,7 +19,7 @@ running for the following endpoints to work.
 
 ### Book a ticket
 
-> Books a ticket for a passenger based on the provided ticket request details.
+> Books a ticket for a passenger based on the provided ticket request details. Ticket is booked based on multiple validations including train and seat availability, and by making sure that the passenger has no seats allocated already at the time of booking.
 
 Endpoint
 
