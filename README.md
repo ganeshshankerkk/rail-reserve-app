@@ -20,7 +20,7 @@ A Train Ticket Booking API implemented using Spring Boot. It allows users to boo
 Below is a list of API endpoints with their respective input and output. Please note that the application needs to be
 running for the following endpoints to work.
 
-### Book a ticket
+### 1.1 Book a ticket
 
 > Books a ticket for a passenger based on the provided ticket request details. Ticket is booked based on multiple validations including train and seat availability, and by making sure that the passenger has no seats allocated already at the time of booking.
 
@@ -84,7 +84,7 @@ Example output
     "error-message": ""
 }
 ```
-###  Get details of the ticket receipt for the passenger
+###  1.2 Get details of the ticket receipt for the passenger
 
 > Retrieves a ticket for a passenger based on the train ID and passenger email.
 
@@ -128,7 +128,7 @@ Example output
     "error-message": ""
 }
 ```
-### Modify passenger seat based on passenger seat preference
+### 1.3 Modify passenger seat based on passenger seat preference
 
 > Updates a ticket based on passenger preference and availability. The passenger can opt for a seat preference. Accepted seat preferences include `LB`, `MB`, `UB`, `SLB`, `SUB`. System updates the seat based on seat availability.
 
@@ -186,7 +186,7 @@ Example output
     "error-message": ""
 }
 ```
-### Get passengers and seat they are allocated by the requested section 
+### 1.4 Get passengers and seat they are allocated by the requested section 
 
 > Retrieves a list of passengers for a specific train and section.
 
@@ -301,7 +301,7 @@ Example output
   "error-message": ""
 }
 ```
-### Cancel a ticket and remove the passenger from the train
+### 1.5 Cancel a ticket and remove the passenger from the train
 
 > Cancels a ticket for a passenger and removes the associated passenger from the train.
 
@@ -330,7 +330,7 @@ Example output
     "error-message": ""
 }
 ```
-### Get the standard seating plan structure for all trains.
+### 1.6 Get the standard seating plan structure for all trains.
 
 Endpoint
 
@@ -421,7 +421,7 @@ Example output
 }
 ```
 
-### Get list of trains with corresponding sections and passengers
+### 1.7 Get list of trains with corresponding sections and passengers
 
 Endpoint
 
