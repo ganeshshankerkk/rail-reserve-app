@@ -11,8 +11,7 @@ A Train Ticket Booking API implemented using Spring Boot. It allows users to boo
 - Open Spring Tool Suite / Eclipse
 - File -> Open projects from file system... -> Navigate to the folder where you unzipped the zip
 - Select the right project
-- Choose the Spring
--  Boot Application file (search for @SpringBootApplication)
+- Choose the Spring Boot Application file (search for @SpringBootApplication)
 - Right Click on the file and Run as Java Application (Eclipse) / Spring Boot App (Spring Tool Suite)
   
 ## API Documentation
