@@ -34,6 +34,8 @@ public class TicketController {
 	}
 
 	/**
+	 * API 1.1
+	 * 
 	 * Books a ticket for a passenger based on the provided ticket request details.
 	 *
 	 * @param ticket The details of the ticket to be booked, including passenger
@@ -57,6 +59,8 @@ public class TicketController {
 	}
 
 	/**
+	 * API 1.5
+	 * 
 	 * Cancels a ticket for a passenger and removes the associated passenger from
 	 * the train.
 	 *
@@ -81,6 +85,8 @@ public class TicketController {
 	}
 
 	/**
+	 * API 1.2
+	 * 
 	 * Retrieves a ticket for a passenger based on the train ID and passenger email.
 	 *
 	 * @param id    The ID of the train for which the ticket is being retrieved.
@@ -108,6 +114,9 @@ public class TicketController {
 	}
 
 	/**
+	 * 
+	 * API 1.3
+	 * 
 	 * Updates a ticket based on passenger preference and availability.
 	 * 
 	 * @param updateSeatRequest Request with the train id, ticket id, passenger

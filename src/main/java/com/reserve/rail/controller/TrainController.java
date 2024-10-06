@@ -26,6 +26,8 @@ public class TrainController {
 	}
 
 	/**
+	 * API 1.7
+	 * 
 	 * Retrieves a list of all available trains with it's corresponding sections and
 	 * passengers.
 	 *
@@ -46,6 +48,8 @@ public class TrainController {
 	}
 
 	/**
+	 * API 1.4
+	 * 
 	 * Retrieves a list of passengers for a specific train and section.
 	 *
 	 * @param id      The ID of the train for which the passenger list is requested.
@@ -71,6 +75,8 @@ public class TrainController {
 	}
 
 	/**
+	 * API 1.6
+	 * 
 	 * Retrieves the standard seating plan structure for all trains.
 	 *
 	 * @return A ResponseEntity containing a ResponseMessage with the seat plan
