@@ -312,7 +312,7 @@ Parameters
 
 | Parameter      | Type | Description                                           |
 | -------------- |  --- | ----------------------------------------------------- |       
-| `id` | `Integer`        | The Id of the train|
+| `train-id` | `Integer`        | The Id of the train|
 | `email` | `String`      | The email of the passenger whose ticket to be cancelled|
 
 Example output
