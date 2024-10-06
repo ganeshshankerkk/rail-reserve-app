@@ -19,7 +19,7 @@ running for the following endpoints to work.
 
 ### Book a ticket
 
-Books a ticket for a passenger based on the provided ticket request details.
+> Books a ticket for a passenger based on the provided ticket request details.
 
 Endpoint
 
@@ -83,7 +83,7 @@ Example output
 ```
 ###  Get details of the ticket receipt for the passenger
 
-Retrieves a ticket for a passenger based on the train ID and passenger email.
+> Retrieves a ticket for a passenger based on the train ID and passenger email.
 
 Endpoint
 
@@ -127,7 +127,7 @@ Example output
 ```
 ### Modify passenger seat based on passenger seat preference
 
-Updates a ticket based on passenger preference and availability. The passenger can opt for a seat preference. Accepted seat preferences include `LB`, `MB`, `UB`, `SLB`, `SUB`. System updates the seat based on seat availability.
+> Updates a ticket based on passenger preference and availability. The passenger can opt for a seat preference. Accepted seat preferences include `LB`, `MB`, `UB`, `SLB`, `SUB`. System updates the seat based on seat availability.
 
 Endpoint
 
@@ -184,6 +184,8 @@ Example output
 }
 ```
 ### Get passengers and seat they are allocated by the requested section 
+
+> Retrieves a list of passengers for a specific train and section.
 
 Endpoint
 
@@ -298,7 +300,7 @@ Example output
 ```
 ### Cancel a ticket and remove the passenger from the train
 
-Cancels a ticket for a passenger and removes the associated passenger from the train.
+> Cancels a ticket for a passenger and removes the associated passenger from the train.
 
 Endpoint
 ```http
