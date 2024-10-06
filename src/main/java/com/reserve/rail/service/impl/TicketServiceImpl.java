@@ -60,7 +60,8 @@ public class TicketServiceImpl implements TicketService {
 
 		Passenger passenger = ServiceUtil.generatePassengerTicket(train, ticket, seatTypeMap);
 		message.setData(passenger);
-
+		message.setSuccessMessage(RailReserveConstants.REQUEST_SUCCEEDED);
+		
 		return message;
 	}
 
