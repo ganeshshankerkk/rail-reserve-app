@@ -2,6 +2,9 @@
 
 A Train Ticket Booking API implemented using Spring Boot. It allows users to book, update, and cancel tickets, and retrieve information about trains and seats.
 
+> [!NOTE]  
+> The data is stored in memory per session with no persistence layer involved.
+
 ## Getting Started
 - Download the zip or clone the Git repository
 - Unzip the zip file (if you downloaded one)
