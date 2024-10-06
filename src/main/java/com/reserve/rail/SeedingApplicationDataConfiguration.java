@@ -19,22 +19,25 @@ import com.reserve.rail.entity.Train;
 
 @Configuration
 public class SeedingApplicationDataConfiguration {
-	
+
 	@Bean
 	List<Train> trains() {
 		List<Train> trains = new ArrayList<>();
 		trains.add(new Train(RailReserveConstants.WEST_COST_EXPRESS_ID, RailReserveConstants.WEST_COST_EXPRESS,
 				RailReserveConstants.CHENNAI, RailReserveConstants.MANGALORE,
-				trainToSectionMap().get(RailReserveConstants.WEST_COST_EXPRESS), BigDecimal.valueOf(20)));
+				trainToSectionMap().get(RailReserveConstants.WEST_COST_EXPRESS_ID), BigDecimal.valueOf(20)));
 		trains.add(new Train(RailReserveConstants.CBE_VANDE_BHARAT_ID, RailReserveConstants.CBE_VANDE_BHARAT,
 				RailReserveConstants.BANGALORE, RailReserveConstants.COIMBATORE,
-				trainToSectionMap().get(RailReserveConstants.CBE_VANDE_BHARAT), BigDecimal.valueOf(30)));
+				trainToSectionMap().get(RailReserveConstants.CBE_VANDE_BHARAT_ID), BigDecimal.valueOf(30)));
+		trains.add(new Train(RailReserveConstants.EUROSTAR_TRAIN_9014, RailReserveConstants.EUROSTAR,
+				RailReserveConstants.LONDON_ST_PANCRAS_INTERNATIONAL, RailReserveConstants.PARIS_NORD,
+				trainToSectionMap().get(RailReserveConstants.EUROSTAR_TRAIN_9014), BigDecimal.valueOf(20)));
 		return trains;
 	}
 
 	@Bean
-	Map<String, List<Section>> trainToSectionMap() {
-		Map<String, List<Section>> trainToSectionMap = new HashMap<>();
+	Map<Integer, List<Section>> trainToSectionMap() {
+		Map<Integer, List<Section>> trainToSectionMap = new HashMap<>();
 		List<Section> sections = new ArrayList<>();
 
 		List<Passenger> passengers = new ArrayList<>();
@@ -66,7 +69,7 @@ public class SeedingApplicationDataConfiguration {
 				RailReserveConstants.UB));
 
 		sections.add(new Section(RailReserveConstants.SECTION_B, passengers));
-		trainToSectionMap.put(RailReserveConstants.WEST_COST_EXPRESS, sections);
+		trainToSectionMap.put(RailReserveConstants.WEST_COST_EXPRESS_ID, sections);
 
 		sections = new ArrayList<>();
 		passengers = new ArrayList<>();
@@ -106,7 +109,38 @@ public class SeedingApplicationDataConfiguration {
 				RailReserveConstants.SECTION_B, 3, RailReserveConstants.UB));
 
 		sections.add(new Section(RailReserveConstants.SECTION_B, passengers));
-		trainToSectionMap.put(RailReserveConstants.CBE_VANDE_BHARAT, sections);
+		trainToSectionMap.put(RailReserveConstants.CBE_VANDE_BHARAT_ID, sections);
+
+		sections = new ArrayList<>();
+		passengers = new ArrayList<>();
+
+		passengers.add(createPassenger("Michael", "Ross", "michael.ross@railreserve.com",
+				RailReserveConstants.EUROSTAR_TRAIN_9014, RailReserveConstants.LONDON_ST_PANCRAS_INTERNATIONAL,
+				RailReserveConstants.PARIS_NORD, 20, RailReserveConstants.EUROSTAR, RailReserveConstants.SECTION_A, 1,
+				RailReserveConstants.LB));
+
+		passengers.add(createPassenger("Patrick", "Charles", "patrick.charles@railreserve.com",
+				RailReserveConstants.EUROSTAR_TRAIN_9014, RailReserveConstants.LONDON_ST_PANCRAS_INTERNATIONAL,
+				RailReserveConstants.PARIS_NORD, 20, RailReserveConstants.EUROSTAR, RailReserveConstants.SECTION_A, 2,
+				RailReserveConstants.MB));
+
+		sections.add(new Section(RailReserveConstants.SECTION_A, passengers));
+
+		passengers = new ArrayList<>();
+
+		passengers.add(
+				createPassenger("Luciana", "Silva", "luci@railreserve.com", RailReserveConstants.EUROSTAR_TRAIN_9014,
+						RailReserveConstants.LONDON_ST_PANCRAS_INTERNATIONAL, RailReserveConstants.PARIS_NORD, 20,
+						RailReserveConstants.EUROSTAR, RailReserveConstants.SECTION_B, 1, RailReserveConstants.LB));
+
+		passengers.add(
+				createPassenger("Samuel", "Issac", "samuel@railreserve.com", RailReserveConstants.EUROSTAR_TRAIN_9014,
+						RailReserveConstants.LONDON_ST_PANCRAS_INTERNATIONAL, RailReserveConstants.PARIS_NORD, 20,
+						RailReserveConstants.EUROSTAR, RailReserveConstants.SECTION_B, 2, RailReserveConstants.MB));
+
+		sections.add(new Section(RailReserveConstants.SECTION_B, passengers));
+		trainToSectionMap.put(RailReserveConstants.EUROSTAR_TRAIN_9014, sections);
+
 		return trainToSectionMap;
 	}
 

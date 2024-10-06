@@ -10,6 +10,10 @@ public class RailReserveConstants {
 	public static final int WEST_COST_EXPRESS_ID = 22637;
 	public static final String CBE_VANDE_BHARAT = "CBE Vande Bharat";
 	public static final int CBE_VANDE_BHARAT_ID = 20641;
+	public static final String EUROSTAR = "Eurostar";
+	public static final int EUROSTAR_TRAIN_9014 = 9014;
+	public static final String PARIS_NORD ="Paris Nord";
+	public static final String LONDON_ST_PANCRAS_INTERNATIONAL = "London St. Pancras International";
 	public static final String BLANK = "";
 	public static final String INVALID_REQUEST = "Invalid Request";
 	public static final String REQUEST_SUCCEEDED = "Request succeeded";
